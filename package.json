@@ -6,7 +6,8 @@
   "scripts": {
     "build": "browserify src/index.js > dist/build.js",
     "watch": "watchify -v -d src/index.js -o dist/build.js",
-    "livereload": "live-reload --port 9091 ./dist/"
+    "livereload": "live-reload --port 9091 ./dist/",
+    "start": "parallelshell \"npm run watch\" \"npm run livereload\""
   },
   "license": "MIT",
   "dependencies": {
@@ -22,6 +23,7 @@
     "browserify": "^13.0.1",
     "less": "^2.7.1",
     "live-reload": "^1.1.0",
+    "parallelshell": "^2.0.0",
     "ricardo-theme-common": "^1.0.1",
     "ricardo-theming": "^1.0.0",
     "vueify": "^8.5.1",

@@ -20,14 +20,11 @@
 
   var
       store = require('./vuex/store.js'),
-      formElements = require('element~form-elements'),
-      formItem = formElements.components.formItem,
       parent = require('component~parent');
 
   module.exports = {
     el: '#app',
     components: {
-      'r-form-item': formItem,
       'r-parent': parent
     },
     store: store,
